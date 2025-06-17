@@ -245,6 +245,13 @@ color: #28293f;
        
     }
 
+    .sidebar.active{
+        position: absolute;
+        left: 40px;
+        z-index: 1;
+        width: 80%;
+    }
+
     .hero-content{
         width: 100vw;
         padding: 40px;
