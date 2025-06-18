@@ -18,8 +18,7 @@ body {
     z-index: 2;
 }
 
-.btn-menu-aberto,
-.btn-menu-fechado {
+.btn-menu-aberto{
     background: transparent;
     font-size: 2rem;
     color: #fff;
@@ -35,7 +34,7 @@ li {
     list-style: none;
 }
 
-.container-hero {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +49,7 @@ li {
     border-radius: 20px;
     width: 15vw;
     min-width: 225px;
-    height: 80vh;
+    height: 20vh;
     padding: 20px;
     /* efeito de saída lateral, saindo de left -250 para left 0  */
     position: absolute;
@@ -135,8 +134,10 @@ nav ul li:hover {
     color: #101320;
 }
 
-/* ----------------------------------------------------- */
+/* -------------------fim do sidebar navegação---------------------------------- */
 
+
+/* ----------------------início do hero imagem titulo subtitulo... */
 .hero-content {
     display: flex;
 }
@@ -192,9 +193,12 @@ nav ul li:hover {
     filter: drop-shadow(0 -50px 60px #ffffff6c);
 }
 
+/* -----------------------------fim hero------------------------- */
+
 /* medias queries */
 
 @media (max-width: 1200px) {
+/* ---------------hero----------------- */
     .content-text {
         width: 30vw;
         padding: 20px;
@@ -214,10 +218,10 @@ nav ul li:hover {
 }
 
 @media (max-width: 998px) {
-    .container-hero {
+    .container {
         padding: 20px;
     }
-
+/* -----------hero------------- */
     .hero-content {
         width: 60vw;
         flex-direction: column-reverse;
@@ -242,6 +246,12 @@ nav ul li:hover {
 }
 
 @media (max-width: 790px) {
+
+    .menu {
+        display: block;
+    }
+
+    /* ---------------sidebar----------- */
     .sidebar {
     }
 
@@ -250,6 +260,7 @@ nav ul li:hover {
         left: 40px;
         z-index: 1;
     }
+    /* -------------fim sidebar-------------------- */
 
     .hero-content {
         width: 100vw;
@@ -274,18 +285,24 @@ nav ul li:hover {
         font-size: 1.2em;
     }
 
-    .menu {
-        display: block;
-    }
 }
 
 @media (max-width: 500px) {
+    
+      .fa-xmark {
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          font-size: 3rem;
+      }
+/* ------------------hero------------------ */
     .btn-curriculo {
         padding: 14px 20%;
         font-size: 1.2em;
     }
 
-    .sidebar.active {
+/* -----------------sidebar------------ */
+      .sidebar.active {
         min-width: 100vw;
         height: 100vh;
         left: 0;
@@ -293,12 +310,5 @@ nav ul li:hover {
 
     .sidebar-logo {
         margin-bottom: 0;
-    }
-
-    .fa-xmark {
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        font-size: 3rem;
     }
 }
