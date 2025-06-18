@@ -55,7 +55,7 @@ li {
     position: absolute;
     z-index: 2;
     left: -250px;
-    transition: ease-in-out 0.9s;
+    transition: ease-in-out 0.5s;
 }
 
 .sidebar.active {
