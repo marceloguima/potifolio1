@@ -11,23 +11,20 @@ body {
 }
 
 /*ícones de menu */
-.menu{
+.menu {
     position: absolute;
     top: 40px;
     display: none;
     z-index: 2;
 }
 
-
-.btn-menu-aberto, .btn-menu-fechado{
+.btn-menu-aberto,
+.btn-menu-fechado {
     background: transparent;
     font-size: 2rem;
     color: #fff;
     border: none;
-    
 }
-
-
 
 a {
     text-decoration: none;
@@ -38,18 +35,29 @@ li {
     list-style: none;
 }
 
-
 .container-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    padding:  20px;
+    padding: 20px;
     position: relative;
 }
-
-
+.sidebar {
+    background: #28293f;
+    box-shadow: 6px 4px 15px #4b4b4b;
+    border-radius: 20px;
+    width: 15vw;
+    min-width: 225px;
+    height: 80vh;
+    padding: 20px;
+    /* efeito de saída lateral, saindo de left -250 para left 0  */
+    position: absolute;
+    z-index: 2;
+    left: -250px;
+    transition: ease-in-out 0.9s;
+}
 
 .sidebar.active {
     background: #28293f;
@@ -59,28 +67,26 @@ li {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 6px 4px 15px #4b4b4b;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
-.sidebar{
-    display: none;
+    left: 0;
 }
 
 .sidebar-logo {
     margin-bottom: 30%;
     height: 10%;
+    width: 200px;
+    margin: 0 auto;
 }
 
-.sidebar-logo a {
-    font-size: 1.5em;
+.nome {
+    font-size: 1.2em;
     font-weight: 700;
 }
 
-.sidebar-logo span {
+.sobrenome {
+    font-size: 1.1em;
     font-weight: 400;
+    text-align: end;
+    width: 180px;
 }
 
 nav {
@@ -109,26 +115,19 @@ nav ul li {
     justify-content: start;
     height: 40px;
     width: 150px;
-    padding: 10px ;
+    padding: 10px;
     border-radius: 8px;
     transition: ease-in-out 0.3s;
 }
 
-
-
-
 nav ul li:hover {
-        background: #797a8f;
+    background: #797a8f;
 }
 
-
-
-.btn-figma{
+.btn-figma {
     border: solid 1px;
-    padding: 10px 10% ;
+    padding: 10px 10%;
     border-radius: 10px;
-   
-  
 }
 
 .btn-figma:hover {
@@ -136,10 +135,9 @@ nav ul li:hover {
     color: #101320;
 }
 
-
 /* ----------------------------------------------------- */
 
-.hero-content{
+.hero-content {
     display: flex;
 }
 
@@ -179,11 +177,9 @@ nav ul li:hover {
     transition: ease-in-out 0.3s;
 }
 
-
-
-.btn-curriculo:hover{
-background: #fff;
-color: #28293f;
+.btn-curriculo:hover {
+    background: #fff;
+    color: #28293f;
 }
 
 .image {
@@ -196,123 +192,113 @@ color: #28293f;
     filter: drop-shadow(0 -50px 60px #ffffff6c);
 }
 
-
 /* medias queries */
 
-@media(max-width: 1200px){
-    .content-text{
+@media (max-width: 1200px) {
+    .content-text {
         width: 30vw;
         padding: 20px;
     }
 
-    .title-sub h1{
+    .title-sub h1 {
         font-size: 3em;
     }
 
-    .image{
+    .image {
         width: 400px;
     }
 
-    .btn-curriculo{
+    .btn-curriculo {
         padding: 14px 22px;
     }
 }
 
-@media(max-width: 998px){
-.container-hero{
-    padding: 20px;
-}
-
- .hero-content{
-    width: 60vw;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
- }
-.content-text{
-    padding: 0;
-    width: 100%;
-    gap: 30px;
-}
-
-.descricao p{
-    margin-bottom: 50px;
-    
-}
-
-.title-sub h1, h3{
-   width: 100%;
-   text-align: center;
-   
-}
-
-
-}
-
-@media(max-width:790px){
-    .sidebar{
-        display: none;
-       
+@media (max-width: 998px) {
+    .container-hero {
+        padding: 20px;
     }
 
-    .sidebar.active{
+    .hero-content {
+        width: 60vw;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content-text {
+        padding: 0;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .descricao p {
+        margin-bottom: 50px;
+    }
+
+    .title-sub h1,
+    h3 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 790px) {
+    .sidebar {
+    }
+
+    .sidebar.active {
         position: absolute;
         left: 40px;
         z-index: 1;
-       
     }
 
-    .hero-content{
+    .hero-content {
         width: 100vw;
         padding: 40px;
-       
     }
 
-    .descricao{
+    .descricao {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
 
-    .descricao p{
+    .descricao p {
         text-align: center;
     }
 
-    .title-sub h1{
+    .title-sub h1 {
         font-size: 2em;
     }
 
-    .title-sub h3{
+    .title-sub h3 {
         font-size: 1.2em;
     }
 
-    .menu{
+    .menu {
         display: block;
     }
 }
 
-@media(max-width: 500px){
-    .btn-curriculo{
-    padding: 14px 20%;
-    font-size: 1.2em;
+@media (max-width: 500px) {
+    .btn-curriculo {
+        padding: 14px 20%;
+        font-size: 1.2em;
     }
 
-    .sidebar.active{
-       min-width: 100vw;
+    .sidebar.active {
+        min-width: 100vw;
         height: 100vh;
         left: 0;
     }
 
-    .sidebar-logo{
+    .sidebar-logo {
         margin-bottom: 0;
     }
 
-    .fa-xmark{
+    .fa-xmark {
         position: absolute;
         top: 60px;
         left: 20px;
         font-size: 3rem;
-
     }
 }
