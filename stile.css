@@ -15,7 +15,9 @@ body {
     position: absolute;
     top: 40px;
     display: none;
+    z-index: 2;
 }
+
 
 .btn-menu-aberto, .btn-menu-fechado{
     background: transparent;
@@ -57,7 +59,10 @@ li {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 6px 4px 15px #4b4b4b;
-    display: block
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .sidebar{
@@ -79,6 +84,9 @@ li {
 }
 
 nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 80%;
     width: 100%;
 }
@@ -98,9 +106,9 @@ nav ul li i {
 
 nav ul li {
     display: flex;
-    align-items: center;
+    justify-content: start;
     height: 40px;
-    width: 78%;
+    width: 150px;
     padding: 10px ;
     border-radius: 8px;
     transition: ease-in-out 0.3s;
@@ -108,9 +116,11 @@ nav ul li {
 
 
 
+
 nav ul li:hover {
-    background: #797a8f;
+        background: #797a8f;
 }
+
 
 
 .btn-figma{
@@ -249,7 +259,7 @@ color: #28293f;
         position: absolute;
         left: 40px;
         z-index: 1;
-        width: 80%;
+       
     }
 
     .hero-content{
@@ -286,5 +296,19 @@ color: #28293f;
     .btn-curriculo{
     padding: 14px 20%;
     font-size: 1.2em;
+    }
+
+    .sidebar.active{
+       min-width: 100vw;
+        height: 100vh;
+        left: 0;
+    }
+
+    .fa-xmark{
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        font-size: 3rem;
+
     }
 }
