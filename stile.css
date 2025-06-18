@@ -304,6 +304,10 @@ color: #28293f;
         left: 0;
     }
 
+    .sidebar-logo{
+        margin-bottom: 0;
+    }
+
     .fa-xmark{
         position: absolute;
         top: 60px;
