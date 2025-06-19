@@ -52,7 +52,7 @@ li {
     background: #28293f;
     box-shadow: 6px 4px 15px #4b4b4b;
     border-radius: 20px;
-    width: 15vw;
+    width: 18vw;
     min-width: 225px;
     height: 20vh;
     padding: 20px;
@@ -65,7 +65,7 @@ li {
 
 .sidebar.active {
     background: #28293f;
-    width: 15vw;
+    width: 18vw;
     min-width: 225px;
     height: 80vh;
     padding: 20px;
@@ -84,6 +84,7 @@ li {
 .nome {
     font-size: 1.2em;
     font-weight: 700;
+    text-shadow: 1px 1px 20px #fff;
 }
 
 .sobrenome {
@@ -91,6 +92,8 @@ li {
     font-weight: 400;
     text-align: end;
     width: 180px;
+        text-shadow: 1px 1px 20px #fff;
+
 }
 
 nav {
@@ -121,7 +124,7 @@ nav ul li {
     width: 150px;
     padding: 10px;
     border-radius: 8px;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.4s;
 }
 
 nav ul li:hover {
@@ -129,9 +132,13 @@ nav ul li:hover {
 }
 
 .btn-figma {
+    width: 200px;
     border: solid 1px;
-    padding: 10px 10%;
+    padding: 10px ;
     border-radius: 10px;
+    font-size: 0.9em;
+        transition: ease-in-out 0.4s;
+
 }
 
 .btn-figma:hover {
@@ -160,6 +167,8 @@ nav ul li:hover {
 .title-sub h1 {
     width: 50%;
     font-size: 4em;
+        text-shadow: 1px 1px 20px #bec1c2;
+
 }
 
 .title-sub h3 {
@@ -180,7 +189,7 @@ nav ul li:hover {
     font-weight: 500;
     border-radius: 12px;
     box-shadow: 6px 4px 10px #4b4b4b;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.4s;
 }
 
 .btn-curriculo:hover {
